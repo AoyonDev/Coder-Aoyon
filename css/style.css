@@ -1,0 +1,664 @@
+/* ====== COMMON CSS START ====== */
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,ol,li{
+    list-style-type: none;
+}
+body{
+    overflow-x: hidden;
+    background-color: #0a192f;
+    color: #e6f1ff;
+}
+html,body{
+    scroll-behavior: unset !important;
+}
+
+/* ====== COMMON CSS   END ====== */
+
+/* ====== ANIMATE CSS   END ====== */
+
+.top-scroll-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #18A7B9;
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+    z-index: 999;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    animation-name: scroll-btn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes scroll-btn {
+        
+    from{
+        bottom: 65px;
+        background: #18A7B9;
+        color: #313131;
+    }
+    to{
+        bottom: 100px;
+        background: #b91818;
+        color: #f1f1f1;
+    }
+}
+.top-scroll-btn i{
+    color: #313131;
+    font-size: 30px;
+    margin-top: 10px;
+    animation-name: scroll-btn-icon;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes scroll-btn-icon {
+        
+    from{
+        color: #313131;
+    }
+    to{
+        color: #f1f1f1;
+    }
+}
+
+/* ====== ANIMATE CSS   END ====== */
+
+
+/* ====== NAVBAR CSS START ====== */
+.navbar{
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 100%;
+    z-index: 999;
+    animation-name: navbar;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes navbar {
+    from{
+        margin-top: -100px;
+    }
+    to{
+        margin-top: 10px;
+    }
+}
+
+
+.navbar-brand{
+    display: flex;
+    animation-name: logo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes logo {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+}
+
+.logo-titel{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: #dddddd;
+    margin-top: 30px;
+    margin-left: 20px;
+    transition: all linear 0.5s;
+}
+.navbar-brand:hover .logo-titel{
+    color: #00C07B;
+}
+
+
+
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #dddddd;
+    transition: all linear 0.4s;
+    position: relative;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color: #00C07B;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: none;
+    background: #21e79e;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all linear 0.4s;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover:after{
+    opacity: 1;
+}
+
+.navbar-expand-lg .resume .resume-btn {
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #dddddd;
+    transition: all linear 0.4s;
+    border: 2px solid #FA00FF;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.navbar-expand-lg .resume .resume-btn:hover{
+    color: #1a1a1a;
+    background: #FA00FF;
+}
+
+
+
+/* ====== NAVBAR CSS   END ====== */
+
+
+
+
+
+/* ====== BANNER CSS START ====== */
+
+
+/* .particles-wrapper {
+    position: absolute;
+    top: 15%;
+    left: 17%;
+} */
+
+#banner-part{
+    /* background: url(../images/Banner/banner-4.jpg); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 240px;
+    padding-bottom: 150px;
+    position: relative;
+    z-index: 1;
+}
+#banner-part::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.7); */
+    z-index: -1;
+    animation-name: banner;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1;
+}
+/* @keyframes banner {
+    from{
+        background: rgba(106, 112, 101, 0.164);
+    }
+    to{
+        background: rgba(0, 0, 0, 0.233);
+    }
+} */
+
+
+.banner-text h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #dddddd;
+}
+.banner-text h4 span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #00C07B;
+}
+
+.banner-text h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    color: #dddddd;
+    padding-top: 0px;
+}
+.banner-text h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #dddddd;
+    padding-top: 10px;
+}
+/* typed */
+
+.developers{
+    color: #03f7ad;
+    font-size: 24px;
+}
+.designer{
+    color: #FA00FF;
+    font-size: 24px;
+}
+
+
+.banner-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #dddddd;
+    text-align: justify;
+    text-transform: capitalize;
+    padding-top: 20px;
+}
+
+
+
+.banner-profile-img img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px solid #FA00FF;
+    padding: 12px;
+    margin-left: 30px;
+    animation-name: profile-img;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes profile-img {
+    0%{
+        background: rgb(250,0,255);
+        background: linear-gradient(90deg, rgba(250,0,255,1) 0%, rgba(0,192,123,1) 50%, rgba(112,0,255,1) 100%);
+    }
+    25%{
+        background: rgb(0,192,123);
+        background: linear-gradient(90deg, rgba(0,192,123,1) 0%, rgba(250,0,255,1) 50%, rgba(112,0,255,1) 100%);
+    }
+    50%{
+        background: rgb(250,0,255);
+        background: linear-gradient(90deg, rgba(250,0,255,1) 50%, rgba(0,192,123,1) 100%);
+    }
+    75%{
+        background: rgb(250,0,255);
+        background: linear-gradient(90deg, rgba(250,0,255,1) 0%, rgba(0,192,123,1) 100%);
+    }
+    100%{
+        background: rgb(250,0,255);
+        background: linear-gradient(90deg, rgba(250,0,255,1) 0%, rgba(0,192,123,1) 50%, rgba(112,0,255,1) 100%);
+    }
+}
+.banner-profile-img{
+    position: relative;
+}
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 43.5%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    transition: all linear 0.5s;
+    opacity: 0;
+}
+.img-text h2{
+    text-align: center;
+    line-height: 300px;
+}
+
+
+
+
+.banner-profile-img img:hover{
+    animation-name: profile-img-rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes profile-img-rotate {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+.banner-profile-img:hover .img-text{
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.banner-left{
+    animation-name: banner-left;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+@keyframes banner-left {
+    0%{
+        scale: 0.5;
+        margin-left: -100%;
+    }
+    50%{
+        scale: 0.5;
+        margin-left: 0%;
+    }
+    100%{
+        scale: 1;
+        margin-left: 0%;
+    }
+} 
+
+
+
+.banner-right{
+    animation-name: banner-right;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+@keyframes banner-right {
+    0%{
+        scale: 0.5;
+        margin-right: -100%;
+    }
+    50%{
+        scale: 0.5;
+        margin-right: 0%;
+    }
+    100%{
+        scale: 1;
+        margin-right: 0%;
+    }
+} 
+
+
+
+
+.banner-btns{
+    margin-top: 30px;
+}
+.banner-btns a{
+    margin-right: 20px;
+}
+
+.banner-btns a button{
+    background: #184233;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #03f7ad;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #03f7ad;
+}
+
+/* ====== BANNER CSS   END ====== */
+
+
+
+
+
+
+
+/* ====== COMMON TITLE CSS START ====== */
+
+.common-title{
+    text-align: center !important;
+    padding: 30px 0px;
+}
+.common-title h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #03f7ad;
+}
+.common-title h4 span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #FA00FF;
+}
+
+
+.common-wrapper{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.devider:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: calc(50% - 5px);
+    width: 12px;
+    height: 12px;
+    background-color: #21e79e;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px#1D1D1D,0 0 0 10px #1d1d1d;
+}
+
+.devider:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    height: 1px;
+    background: #fff;
+}
+
+
+
+
+/* ====== COMMON TITLE CSS   END ====== */
+
+
+
+
+
+
+
+
+
+
+
+/* ====== PROJECT PART CSS START ====== */
+
+.project-card{
+    padding: 0px;
+    border: 2px solid #03f7ad;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    /* height: 9ABOUT PART0%; */
+}
+.project-img {
+    /* filter: drop-shadow(0px 6px 10px #FA00FF); */
+    transition: all linear 0.5s;
+    text-align: center;
+}
+.project-img:hover{
+    /* filter: drop-shadow(0px 15px 4px #FA00FF); */
+}
+
+.project-img img {
+    width: 410px;
+    height: 224px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    position: relative;
+}
+
+
+.project-text{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.project-text h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #FFF;
+    padding-top: 10px;
+}
+.project-text p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+    text-align: justify;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.project-text span{
+    display: block;
+}
+
+.lang-btn{
+    margin-right: 5px;
+}
+.lang-btn button{
+    background: #184233;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid #FA00FF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #03f7ad;
+}
+
+
+
+.project-btn{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.project-btn a{
+    margin-right: 20px;
+}
+
+.project-btn a button{
+    background: #184233;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #03f7ad;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #03f7ad;
+}
+
+/* ====== PROJECT PART CSS   END ====== */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== ABOUT PART CSS START ====== */
+
+#about-part{
+    margin: 50px 0px;
+}
+.social-icon{
+    text-align: center;
+}
+.social-icon a{
+    margin: 0px 20px;
+}
+.social-icon a i{
+    height: 60px;
+    width: 60px;
+    background: #184233;
+    color: #03f7ad;
+    line-height: 60px;
+    font-size: 26px;
+    border-radius: 50%;
+    transition: all linear 0.6s;
+}
+.social-icon .facebook{
+    /* background: #18A7B9; */
+}
+.social-icon .github{
+    /* background: #1D1D1D; */
+}
+.social-icon .linkedin{
+    /* background:  #0072b1; */
+}
+.social-icon .facebook:hover{
+    background: #3b5998; 
+    color: #FFF;
+}
+.social-icon .linkedin:hover{
+    background: #0086ce; 
+    color: #FFF;
+}
+.social-icon .github:hover{
+    background: #1D1D1D; 
+    color: #FFF;
+}
+
+/* ====== ABOUT PART CSS   END ====== */
+
+
+
+
+
+
+
+/* ====== BANNER CSS START ====== */
+
+
+/* ====== BANNER CSS   END ====== */
